@@ -32,12 +32,12 @@
     var myFunction = function(element, options) {     
 		this.element = $(element);
 		this.options = options;					
-		this.titleElementId = options.titleElementId;
+		this.titleElementId = $('#' + options.titleElementId);
 		this.checkedIndex =  options.checkedIndex;
 		this.cookieKey =  options.cookieKey;
 		var me = this;
 		this.changeTable = function(me){
-		  	$(".is-hide-co").each(function(index, el) {
+		  	me.titleElementId.find(".is-hide-co").each(function(index, el) {
 		        if($(this).prop('checked')){
 		        	console.log(this.element);
 		           	me.element.find("tr th").eq(index).show();
@@ -58,18 +58,18 @@
 		    isRecord=isRecord||false;
 		    var fromCookieRecord = true;
 		    if(!isRecord){
-		        fromCookieRecord = getCookie(this.cookieKey);
+		        fromCookieRecord = getCookie(me.cookieKey);
 		        if(!fromCookieRecord){
 		            fromCookieRecord = me.checkedIndex;
 		        }
 		        if(fromCookieRecord){
-		            this.initTableTitle(fromCookieRecord);
+		            me.initTableTitle(fromCookieRecord);
 		        }
 		        return;
 		    }
 		    if(!fromCookieRecord||isRecord){
 		        var str='';
-		        $(".is-hide-co").each(function(index, el) {
+		        me.titleElementId.find(".is-hide-co").each(function(index, el) {
 		            if($(this).prop('checked')){
 		                if(str){
 		                    str+=","+index; 
@@ -86,7 +86,7 @@
 		    if(record){
 		        ids=record.split(',');
 		        for(i=0;i<ids.length;i++){
-		            $(".is-hide-co").eq(ids[i]).prop("checked",true);
+		            me.titleElementId.find(".is-hide-co").eq(ids[i]).prop("checked",true);
 		        }
 		    }
 		}
@@ -104,13 +104,13 @@
 
 		        html+='<span><input type="checkbox" class="is-hide-co" name="is-hide-co[]" > '+removeHtmlTag($(this).html())+'</span>';
 		    });
-		    $('#' + me.titleElementId).html(html);
+		    me.titleElementId.html(html);
 		}
 		this.init = function(){
 			this.initTableCheckbox(me);
             this.recordTableTitle(me);
             this.changeTable(me);
-            $(".is-hide-co").change(function(event) {
+            this.titleElementId.find(".is-hide-co").change(function(event) {
                 me.changeTable(me);
             });
 		}
