@@ -11,9 +11,9 @@ var defaults = {    <br>
 	titleElementId:'table_title1'   <br>
 }; <br>
 
-<br>
+
 $("#table-content").diyColume(defaults);<br>
 
-<br><br>演示示例 <a href="http://www.an2.net/custom-table-colume/" target="_blank">http://www.an2.net/custom-table-colume/</a>
+<br>演示示例 <a href="http://www.an2.net/custom-table-colume/" target="_blank">http://www.an2.net/custom-table-colume/</a>
 </body>
 </html>
