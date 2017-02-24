@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+	line-height: 28px;
+	font-size: 14px;
+}
+div{
+	width: 980px;
+	margin: 10px auto;
+	background: #f1f1f1;
+	border: 1px dashed #ccc;
+	padding: 18px;
+}
+table{
+	width: 100%;
+	border: 1px solid #ccc;
+	border-collapse:collapse;  
+	border-spacing:0;
+}
+table td{
+	border: 1px solid #ccc;
+	text-align: center;
+
+}
