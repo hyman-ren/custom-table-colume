@@ -16,7 +16,7 @@ table{
 	border-collapse:collapse;  
 	border-spacing:0;
 }
-table td{
+table td, table th{
 	border: 1px solid #ccc;
 	text-align: center;
 
