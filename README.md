@@ -13,6 +13,6 @@ var defaults = {    <br>
 
 $("#table-content").diyColume(defaults);<br>
 
-<br>演示示例 <a href="http://www.an2.net/custom-table-colume/" target="_blank">http://www.an2.net/custom-table-colume/</a>
+<br>演示示例 <a href="https://hyman-ren.github.io/custom-table-colume/" target="_blank">https://hyman-ren.github.io/custom-table-colume/</a>
 </body>
 </html>
